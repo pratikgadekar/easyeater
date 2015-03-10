@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Easyeater": {
+            "applicationId": "IPZGcRU58ew1FkZopIbcIbu53dY2hVVprAZER4tD", 
+            "masterKey": "sIBROyaVAUPaB146V4ntMkcc38nul2gYGKi9FhZE"
+        }, 
+        "_default": {
+            "link": "Easyeater"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}
