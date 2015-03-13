@@ -762,3 +762,65 @@ java.io.FileNotFoundException: /Users/sandeepbhambad/parse/easyeater/.metadata/.
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.resources 4 566 2015-03-10 19:15:46.575
+!MESSAGE Could not save safe table.
+!STACK 0
+java.io.FileNotFoundException: /Users/sandeepbhambad/parse/easyeater/.metadata/.plugins/org.eclipse.core.resources/.safetable/com.aptana.core.io.5 (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:194)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:145)
+	at org.eclipse.core.internal.resources.SafeFileTable.save(SafeFileTable.java:82)
+	at org.eclipse.core.internal.resources.SaveContext.commit(SaveContext.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.commit(SaveManager.java:324)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1193)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.resources 4 566 2015-03-10 19:16:18.892
+!MESSAGE Could not save master table to file '/Users/sandeepbhambad/parse/easyeater/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak'.
+!STACK 0
+java.io.FileNotFoundException: /Users/sandeepbhambad/parse/easyeater/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1229)
+	at org.eclipse.core.internal.resources.SaveManager.cleanMasterTable(SaveManager.java:228)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1138)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2365)
+	at com.appcelerator.titanium.rcp.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:524)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.ui.ide 4 4 2015-03-10 19:16:20.325
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2015-03-10 19:16:20.326
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 566 2015-03-10 19:16:20.326
+!MESSAGE Could not save safe table.
+!STACK 0
+java.io.FileNotFoundException: /Users/sandeepbhambad/parse/easyeater/.metadata/.plugins/org.eclipse.core.resources/.safetable/com.aptana.core.io.1 (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:194)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:145)
+	at org.eclipse.core.internal.resources.SafeFileTable.save(SafeFileTable.java:82)
+	at org.eclipse.core.internal.resources.SaveContext.commit(SaveContext.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.commit(SaveManager.java:324)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1193)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2365)
+	at com.appcelerator.titanium.rcp.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:524)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-03-10 19:16:24.105
+!MESSAGE An internal error occurred during: "Sending Analytics Ping ...".
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.getAnalyticsLogger(DefaultAnalyticsEventHandler.java:207)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.sendEventSync(DefaultAnalyticsEventHandler.java:241)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler$1.run(DefaultAnalyticsEventHandler.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
