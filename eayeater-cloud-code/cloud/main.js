@@ -1,13 +1,7 @@
-
-// Use Parse.Cloud.define to define as many cloud functions as you want.
-// For example:
-// Parse.Cloud.define("hello", function(request, response) {
-//   response.success("Hello world! 12356");
-// });
-
+var user = require('cloud/user/user.js')
 var lookup = require('cloud/lookup/lookup.js');
 
-
+//for lookup table
 Parse.Cloud.define("lookupSave", function(req, res) {
     if(req.params.id) {
             lookup.update({
@@ -26,9 +20,8 @@ Parse.Cloud.define("lookupSave", function(req, res) {
                     res.error(message);
                 }
             });
-    } else {
- 
-           lookup.save({
+    } else{
+            lookup.save({
                name: req.params.name,
                type: req.params.type,
                updatedAt: req.params.updatedAt,
@@ -44,5 +37,23 @@ Parse.Cloud.define("lookupSave", function(req, res) {
                }
             });
 }
+
+
+//for user table
+Parse.Cloud.define("saveUser",function(req, res){
+		user.save({
+			username: req.params.username,
+			email: req.params.email,
+	 		password: req.params.password,
+            name: req.params.name,
+            success: function(message) {
+            res.success(message);
+            },
+            error: function(message) {
+            res.error(message);
+            }
+      });
+   
+
 });
 
