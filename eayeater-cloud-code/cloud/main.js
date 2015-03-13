@@ -1,5 +1,5 @@
 var user = require('cloud/user/user.js')
-var lookup = require('cloud/lookup/lookup.js');
+var lookup = require('cloud/lookup/lookup.js').lookup;
 
 //for lookup table
 Parse.Cloud.define("lookupSave", function(req, res) {
@@ -31,12 +31,14 @@ Parse.Cloud.define("lookupSave", function(req, res) {
                isDisabled: req.params.isDisabled,
                success: function(message) {
                 res.success(message);
+                console.log(message);
                },
                error: function(message) {
-                res.error(message);
+                 console.log(message);
                }
             });
 }
+});
 
 
 //for user table

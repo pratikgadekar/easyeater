@@ -23,7 +23,7 @@ exports.save = function(params) {
         	lookup.set("updatedBy",params.updatedBy); //currentUser
         	lookup.set("createdAt",params.createdAt); 
         	lookup.set("createdBy",params.createdBy); //currentUser
-            
+            lookup.set("isDisabled",params.isDisabled); 
             lookup.save(null, {
             success: function(lookup) {
                 params.success(Response.SaveSuccess);
@@ -43,15 +43,20 @@ exports.update = function(params) {
         params.error(Response.EmptyParameters);
     }
     else{
-    	   var currentUser = Parse.User.current();
-       
-        	var lookup = new Lookup();
-        	lookup.set("name",params.name);
-        	lookup.set("type",params.type);
-        	lookup.set("updatedAt",params.updatedAt);
-        	lookup.set("updatedBy",params.updatedBy); //currentUser
-        	lookup.set("createdAt",params.createdAt); 
-        	lookup.set("createdBy",params.createdBy); //currentUser
+
+    	var query = new Parse.Query(Lookup);
+        query.equalTo("objectId", params.id);
+        query.first({
+          success: function(shop) {
+          var currentUser = Parse.User.current();
+          var lookup = new Lookup();
+          lookup.set("name",params.name);
+          lookup.set("type",params.type);
+          lookup.set("updatedAt",params.updatedAt);
+          lookup.set("updatedBy",params.updatedBy); //currentUser
+          lookup.set("createdAt",params.createdAt); 
+          lookup.set("createdBy",params.createdBy); //currentUser
+          lookup.set("createdBy",params.createdBy); //currentUser
             lookup.save(null, {
 	            success: function(lookup) {
 	                params.success(Response.SaveSuccess);
@@ -60,5 +65,10 @@ exports.update = function(params) {
 	                  params.error(error);
                 }
             });
-        } 
+          },
+          error: function(error) {
+            alert("Error: " + error.code + " " + error.message);
+          }
+        });
+    }    
 }
