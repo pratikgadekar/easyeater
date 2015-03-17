@@ -9,3 +9,11 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+var _ = require('underscore');
+require('ti.parse');
+
+//Get your  Keys here: https://www.parse.com/apps/quickstart#js/blank
+//Parse.initialize("Application ID", "Javascript Key", "Master Key");
+
+Parse.initialize("IPZGcRU58ew1FkZopIbcIbu53dY2hVVprAZER4tD", "fQ9rTCNgVGNkvEQVw3Vyaw3fq6nktcTVO7jyHlyX", "sIBROyaVAUPaB146V4ntMkcc38nul2gYGKi9FhZE");
