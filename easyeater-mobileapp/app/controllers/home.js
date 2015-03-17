@@ -15,11 +15,11 @@ $.drawermenu.init({
     menuview:menu,
     mainview:main,
     duration:200,
-    parent: thisWin
+    parent: $.home
 });
 
-thisWin.addEventListener('open',function(e){
-	var actionBarHelper = require('com.alcoapps.actionbarhelper')(thisWin);	
+$.home.addEventListener('open',function(e){
+	var actionBarHelper = require('com.alcoapps.actionbarhelper')($.home);	
 	actionBarHelper.setIcon('/drawericonw@2x.png');
 	actionBarHelper.setTitle('ActionBar with DrawerMenu');
 	actionBarHelper.setUpAction(function(e){
@@ -28,4 +28,3 @@ thisWin.addEventListener('open',function(e){
 	actionBarHelper.displayHomeAsUp(false);
 });
 
-thisWin.open();

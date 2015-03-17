@@ -36,7 +36,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
-    var thisWin = $.home;
+    $.home;
     var main = Ti.UI.createView({
         backgroundColor: "#fff"
     });
@@ -47,10 +47,10 @@ function Controller() {
         menuview: menu,
         mainview: main,
         duration: 200,
-        parent: thisWin
+        parent: $.home
     });
-    thisWin.addEventListener("open", function() {
-        var actionBarHelper = require("com.alcoapps.actionbarhelper")(thisWin);
+    $.home.addEventListener("open", function() {
+        var actionBarHelper = require("com.alcoapps.actionbarhelper")($.home);
         actionBarHelper.setIcon("/drawericonw@2x.png");
         actionBarHelper.setTitle("ActionBar with DrawerMenu");
         actionBarHelper.setUpAction(function() {
@@ -58,7 +58,6 @@ function Controller() {
         });
         actionBarHelper.displayHomeAsUp(false);
     });
-    thisWin.open();
     _.extend($, exports);
 }
 
