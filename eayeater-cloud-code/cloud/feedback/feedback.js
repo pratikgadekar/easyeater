@@ -10,7 +10,7 @@ var Feedback = Parse.Object.extend("Feedback");
 
 exports.save = function(params) {
  
-    if(!params || !params.phone_no || !params.name || !params.rating ){
+    if(!params || !params.phone_no || !params.name || !params.rating || !params.description){
         params.error(Response.EmptyParameters);
     }else{
     	 
