@@ -2,6 +2,7 @@ var user = require('cloud/user/user.js')
 var lookup = require('cloud/lookup/lookup.js');
 var menu = require('cloud/menu/menu.js');
 var order = require('cloud/order/order.js');
+var feedback = require('cloud/feedback/feedback.js');
 
 var Menu = Parse.Object.extend('Menu');
 
@@ -155,7 +156,24 @@ Parse.Cloud.beforeSave('Orderlist', function(req, res) {
 });
 
 
+//feedback
 
+Parse.Cloud.define("saveFeedback", function(req, res) {
+
+         feedback.save({
+            phone_no: req.params.phone_no,
+            name: req.params.name,
+            rating: req.params.rating,
+            description: req.params.description,
+            success: function(message) {
+                res.success(message);
+            },
+            error: function(message) {
+                res.error(message);
+            }
+        });
+
+});
 
 
 
