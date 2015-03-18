@@ -1,0 +1,7 @@
+<Alloy>
+	<View id="topView">
+		<View id="menuImgView">
+		<ImageView id="menuListImg"/>
+		</View>
+	</View>
+</Alloy>

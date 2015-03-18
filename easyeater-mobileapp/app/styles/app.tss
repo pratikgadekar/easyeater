@@ -1,0 +1,3 @@
+"TableViewRow":{
+	selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
+}

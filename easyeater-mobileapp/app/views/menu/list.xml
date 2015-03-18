@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="container" id="menuList" backgroundColor="yellow">
+		<Require type="view" src="top_view" id="topView"/>
+	</View>
+</Alloy>

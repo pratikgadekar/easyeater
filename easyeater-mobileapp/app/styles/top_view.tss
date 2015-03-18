@@ -1,0 +1,23 @@
+
+".container" : {
+  
+}
+
+"#topView" : {
+	backgroundColor : "red",
+	height : "50dp",
+	top: "0dp"
+}
+
+"#menuImgView" : {
+	backgroundColor:'green',
+	height : "50dp",
+	width : "50dp",
+	left : "0dp"
+}
+
+"#menuListImg" : {
+	image : "images/icons/icon_menu.png",
+	height : "30dp",
+	width : "30dp"
+}

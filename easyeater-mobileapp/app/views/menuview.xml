@@ -1,0 +1,48 @@
+<Alloy>
+	<View id="menuView">
+		
+		<TableView class="menuTable" id="menuTable">
+			
+			<TableViewRow class="tableRow" id="menuList">
+				<View id="rowContainer">
+					<View id="menuListView" class="rowIcon"/><Label id="menuLabel" class="rowLabel">Menu</Label>
+				</View>
+				<View class="borderRow"/>
+			</TableViewRow>
+			<TableViewRow class="tableRow" id="feedbackList">
+				<View id="rowContainer">
+					<View id="feedbackListView" class="rowIcon"/><Label id="feedbackLabel" class="rowLabel">Feedback</Label>
+				</View>
+				<View class="borderRow"/>
+			</TableViewRow>
+			
+			<TableViewRow class="tableRow" id="aboutus">
+				<View id="rowContainer">
+					<View id="aboutusView" class="rowIcon"/><Label id="aboutUsLabel" class="rowLabel">About Us</Label>
+				</View>
+				<View class="borderRow"/>
+			</TableViewRow>
+			
+			<TableViewRow class="tableRow" id="lookupList">
+				<View id="rowContainer">
+					<View id="lookupListView" class="rowIcon"/><Label id="lookUpLabel" class="rowLabel">Lookup</Label>
+				</View>
+				<View class="borderRow"/>
+			</TableViewRow>
+			
+			<TableViewRow class="tableRow" id="menuListAdmin">
+				<View id="rowContainer">
+					<View id="menuListAdminView" class="rowIcon"/><Label id="menuListAdminLabel" class="rowLabel">Menu List Admin</Label>
+				</View>
+				<View class="borderRow"/>
+			</TableViewRow>
+			
+			<TableViewRow class="tableRow" id="profile">
+				<View id="rowContainer">
+					<View id="profileView" class="rowIcon"/><Label id="profileLabelLabel" class="rowLabel">Profile</Label>
+				</View>
+				<View class="borderRow"/>
+			</TableViewRow>
+		</TableView>
+	</View>
+</Alloy>
