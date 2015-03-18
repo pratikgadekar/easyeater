@@ -1,9 +1,26 @@
+function __processArg(obj, key) {
+    var arg = null;
+    if (obj) {
+        arg = obj[key] || null;
+        delete obj[key];
+    }
+    return arg;
+}
+
 function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "menuview";
-    arguments[0] ? arguments[0]["__parentSymbol"] : null;
-    arguments[0] ? arguments[0]["$model"] : null;
-    arguments[0] ? arguments[0]["__itemTemplate"] : null;
+    if (arguments[0]) {
+        {
+            __processArg(arguments[0], "__parentSymbol");
+        }
+        {
+            __processArg(arguments[0], "$model");
+        }
+        {
+            __processArg(arguments[0], "__itemTemplate");
+        }
+    }
     var $ = this;
     var exports = {};
     $.__views.menuView = Ti.UI.createView({
@@ -25,17 +42,22 @@ function Controller() {
         id: "rowContainer"
     });
     $.__views.menuList.add($.__views.rowContainer);
+    $.__views.menu_icon = Ti.UI.createImageView({
+        left: 15,
+        height: "25dp",
+        width: "25dp",
+        image: "images/icons/icon_menu_128.png",
+        id: "menu_icon"
+    });
+    $.__views.rowContainer.add($.__views.menu_icon);
     $.__views.menuListView = Ti.UI.createView({
-        left: 5,
-        top: 7,
+        left: 10,
         width: "20dp",
         height: "20dp",
         id: "menuListView"
     });
     $.__views.rowContainer.add($.__views.menuListView);
     $.__views.menuLabel = Ti.UI.createLabel({
-        top: 7,
-        left: 10,
         height: "20dp",
         font: {
             fontSize: "12dp"
@@ -65,17 +87,22 @@ function Controller() {
         id: "rowContainer"
     });
     $.__views.feedbackList.add($.__views.rowContainer);
+    $.__views.feedback_icon = Ti.UI.createImageView({
+        left: 15,
+        height: "25dp",
+        width: "25dp",
+        image: "images/icons/icon_feedback_128.png",
+        id: "feedback_icon"
+    });
+    $.__views.rowContainer.add($.__views.feedback_icon);
     $.__views.feedbackListView = Ti.UI.createView({
-        left: 5,
-        top: 7,
+        left: 10,
         width: "20dp",
         height: "20dp",
         id: "feedbackListView"
     });
     $.__views.rowContainer.add($.__views.feedbackListView);
     $.__views.feedbackLabel = Ti.UI.createLabel({
-        top: 7,
-        left: 10,
         height: "20dp",
         font: {
             fontSize: "12dp"
@@ -105,17 +132,22 @@ function Controller() {
         id: "rowContainer"
     });
     $.__views.aboutus.add($.__views.rowContainer);
+    $.__views.aboutus_icon = Ti.UI.createImageView({
+        left: 15,
+        height: "25dp",
+        width: "25dp",
+        image: "images/icons/icon_aboutus_128.png",
+        id: "aboutus_icon"
+    });
+    $.__views.rowContainer.add($.__views.aboutus_icon);
     $.__views.aboutusView = Ti.UI.createView({
-        left: 5,
-        top: 7,
+        left: 10,
         width: "20dp",
         height: "20dp",
         id: "aboutusView"
     });
     $.__views.rowContainer.add($.__views.aboutusView);
     $.__views.aboutUsLabel = Ti.UI.createLabel({
-        top: 7,
-        left: 10,
         height: "20dp",
         font: {
             fontSize: "12dp"
@@ -145,17 +177,22 @@ function Controller() {
         id: "rowContainer"
     });
     $.__views.lookupList.add($.__views.rowContainer);
+    $.__views.lookup_icon = Ti.UI.createImageView({
+        left: 15,
+        height: "25dp",
+        width: "25dp",
+        image: "images/icons/icon_lookup_128.png",
+        id: "lookup_icon"
+    });
+    $.__views.rowContainer.add($.__views.lookup_icon);
     $.__views.lookupListView = Ti.UI.createView({
-        left: 5,
-        top: 7,
+        left: 10,
         width: "20dp",
         height: "20dp",
         id: "lookupListView"
     });
     $.__views.rowContainer.add($.__views.lookupListView);
     $.__views.lookUpLabel = Ti.UI.createLabel({
-        top: 7,
-        left: 10,
         height: "20dp",
         font: {
             fontSize: "12dp"
@@ -185,17 +222,22 @@ function Controller() {
         id: "rowContainer"
     });
     $.__views.menuListAdmin.add($.__views.rowContainer);
+    $.__views.list_icon = Ti.UI.createImageView({
+        left: 15,
+        height: "25dp",
+        width: "25dp",
+        image: "images/icons/icon_list_128.png",
+        id: "list_icon"
+    });
+    $.__views.rowContainer.add($.__views.list_icon);
     $.__views.menuListAdminView = Ti.UI.createView({
-        left: 5,
-        top: 7,
+        left: 10,
         width: "20dp",
         height: "20dp",
         id: "menuListAdminView"
     });
     $.__views.rowContainer.add($.__views.menuListAdminView);
     $.__views.menuListAdminLabel = Ti.UI.createLabel({
-        top: 7,
-        left: 10,
         height: "20dp",
         font: {
             fontSize: "12dp"
@@ -225,17 +267,22 @@ function Controller() {
         id: "rowContainer"
     });
     $.__views.profile.add($.__views.rowContainer);
+    $.__views.profile_icon = Ti.UI.createImageView({
+        left: 15,
+        height: "25dp",
+        width: "25dp",
+        image: "images/icons/icon_profile_128.png",
+        id: "profile_icon"
+    });
+    $.__views.rowContainer.add($.__views.profile_icon);
     $.__views.profileView = Ti.UI.createView({
-        left: 5,
-        top: 7,
+        left: 10,
         width: "20dp",
         height: "20dp",
         id: "profileView"
     });
     $.__views.rowContainer.add($.__views.profileView);
     $.__views.profileLabelLabel = Ti.UI.createLabel({
-        top: 7,
-        left: 10,
         height: "20dp",
         font: {
             fontSize: "12dp"

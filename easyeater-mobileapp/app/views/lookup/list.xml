@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container" id="lookupList" backgroundColor="orange">
+	<View class="container" id="lookupList" backgroundColor="#ffffff">
 		<Require type="view" src="top_view" id="topView"/>
 	</View>
 </Alloy>

@@ -3,5 +3,6 @@
 		<View id="menuImgView">
 		<ImageView id="menuListImg"/>
 		</View>
+		<Label id="headerLabel"/>
 	</View>
 </Alloy>

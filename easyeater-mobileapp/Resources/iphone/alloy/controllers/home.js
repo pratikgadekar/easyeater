@@ -1,3 +1,12 @@
+function __processArg(obj, key) {
+    var arg = null;
+    if (obj) {
+        arg = obj[key] || null;
+        delete obj[key];
+    }
+    return arg;
+}
+
 function Controller() {
     function removePages(pageNumber) {
         1 == pageNumber ? $.drawermenu.drawermainview.remove(menuList.getView()) : 2 == pageNumber ? $.drawermenu.drawermainview.remove(feedbackList.getView()) : 3 == pageNumber ? $.drawermenu.drawermainview.remove(aboutUs.getView()) : 4 == pageNumber ? $.drawermenu.drawermainview.remove(lookUpList.getView()) : 5 == pageNumber ? $.drawermenu.drawermainview.remove(menuAdminList.getView()) : 6 == pageNumber && $.drawermenu.drawermainview.remove(profile.getView());
@@ -9,13 +18,45 @@ function Controller() {
         menuView.lookUpLabel.color = "#4d4d4d";
         menuView.menuListAdminLabel.color = "#4d4d4d";
         menuView.profileLabelLabel.color = "#4d4d4d";
-        1 == activeView ? menuView.menuLabel.color = "#f69a55" : 2 == activeView ? menuView.feedbackLabel.color = "#f69a55" : 3 == activeView ? menuView.aboutUsLabel.color = "#f69a55" : 4 == activeView ? menuView.lookUpLabel.color = "#f69a55" : 5 == activeView ? menuView.menuListAdminLabel.color = "#f69a55" : 6 == activeView && (menuView.profileLabelLabel.color = "#f69a55");
+        menuView.menu_icon.image = "images/icons/icon_menu_128.png";
+        menuView.feedback_icon.image = "images/icons/icon_feedback_128.png";
+        menuView.aboutus_icon.image = "images/icons/icon_aboutus_128.png";
+        menuView.lookup_icon.image = "images/icons/icon_lookup_128.png";
+        menuView.list_icon.image = "images/icons/icon_list_128.png";
+        menuView.profile_icon.image = "images/icons/icon_profile_128.png";
+        if (1 == activeView) {
+            menuView.menuLabel.color = "#f69a55";
+            menuView.menu_icon.image = "images/icons/icon_menu_hover_128.png";
+        } else if (2 == activeView) {
+            menuView.feedbackLabel.color = "#f69a55";
+            menuView.feedback_icon.image = "images/icons/icon_feedback_hover_128.png";
+        } else if (3 == activeView) {
+            menuView.aboutUsLabel.color = "#f69a55";
+            menuView.aboutus_icon.image = "images/icons/icon_aboutus_hover_128.png";
+        } else if (4 == activeView) {
+            menuView.lookUpLabel.color = "#f69a55";
+            menuView.lookup_icon.image = "images/icons/icon_lookup_hover_128.png";
+        } else if (5 == activeView) {
+            menuView.menuListAdminLabel.color = "#f69a55";
+            menuView.list_icon.image = "images/icons/icon_list_hover_128.png";
+        } else if (6 == activeView) {
+            menuView.profileLabelLabel.color = "#f69a55";
+            menuView.profile_icon.image = "images/icons/icon_profile_hover_128.png";
+        }
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "home";
-    arguments[0] ? arguments[0]["__parentSymbol"] : null;
-    arguments[0] ? arguments[0]["$model"] : null;
-    arguments[0] ? arguments[0]["__itemTemplate"] : null;
+    if (arguments[0]) {
+        {
+            __processArg(arguments[0], "__parentSymbol");
+        }
+        {
+            __processArg(arguments[0], "$model");
+        }
+        {
+            __processArg(arguments[0], "__itemTemplate");
+        }
+    }
     var $ = this;
     var exports = {};
     $.__views.home = Ti.UI.createWindow({

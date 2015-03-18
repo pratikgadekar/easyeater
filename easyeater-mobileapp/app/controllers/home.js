@@ -146,23 +146,37 @@ function applyColor(activeView) {
 	menuView.menuListAdminLabel.color = "#4d4d4d";
 	menuView.profileLabelLabel.color = "#4d4d4d";
 	
+	menuView.menu_icon.image = "images/icons/icon_menu_128.png";
+	menuView.feedback_icon.image = "images/icons/icon_feedback_128.png";
+	menuView.aboutus_icon.image = "images/icons/icon_aboutus_128.png";
+	menuView.lookup_icon.image = "images/icons/icon_lookup_128.png";
+	menuView.list_icon.image = "images/icons/icon_list_128.png";
+	menuView.profile_icon.image = "images/icons/icon_profile_128.png";
+	
+
 	if (activeView == 1) {
 		menuView.menuLabel.color = "#f69a55";
+		menuView.menu_icon.image = "images/icons/icon_menu_hover_128.png";
 
 	} else if (activeView == 2) {
 		menuView.feedbackLabel.color = "#f69a55";
+		menuView.feedback_icon.image = "images/icons/icon_feedback_hover_128.png";
 
 	} else if (activeView == 3) {
 		menuView.aboutUsLabel.color = "#f69a55";
+		menuView.aboutus_icon.image = "images/icons/icon_aboutus_hover_128.png";
 
 	} else if (activeView == 4) {
 		menuView.lookUpLabel.color = "#f69a55";
+		menuView.lookup_icon.image = "images/icons/icon_lookup_hover_128.png";
 
 	} else if (activeView == 5) {
 		menuView.menuListAdminLabel.color = "#f69a55";
+		menuView.list_icon.image = "images/icons/icon_list_hover_128.png";
 
 	} else if (activeView == 6) {
 		menuView.profileLabelLabel.color = "#f69a55";
+			menuView.profile_icon.image = "images/icons/icon_profile_hover_128.png";
 
 	}
 

@@ -15,11 +15,18 @@
 	height: '30dp',
 	layout:'horizontal'
 },
-".rowIcon":{
-	left: 5,
-	top: 7,
+".labelView":{
+	left: 10,
+
 	width: "20dp",
 	height: "20dp"
+},
+
+".rowIcon":{
+	//top: 7,
+	left: 15,
+	height:'25dp',
+	width:'25dp',
 },
 "#rowSkull":{
 	backgroundImage: '/21-skull.png'
@@ -31,8 +38,7 @@
 	backgroundImage: '/41-picture-frame.png'
 },
 ".rowLabel":{
-	top: 7,
-	left: 10,
+    //top:'11dp',
 	height: "20dp",
 	font:{
 		fontSize: "12dp"
@@ -52,3 +58,32 @@
 	width:'100%',
 	bottom:'0dp'
 },
+
+
+
+"#menu_icon":{
+image : "images/icons/icon_menu_128.png",	
+	
+},
+
+"#feedback_icon":{
+image : "images/icons/icon_feedback_128.png",	
+},
+
+"#aboutus_icon":{
+image : "images/icons/icon_aboutus_128.png",	
+},
+
+"#lookup_icon":{
+image : "images/icons/icon_lookup_128.png",	
+},
+
+
+
+"#list_icon":{
+image : "images/icons/icon_list_128.png",	
+},
+
+"#profile_icon":{
+image : "images/icons/icon_profile_128.png",	
+}

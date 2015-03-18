@@ -1,14 +1,31 @@
+function __processArg(obj, key) {
+    var arg = null;
+    if (obj) {
+        arg = obj[key] || null;
+        delete obj[key];
+    }
+    return arg;
+}
+
 function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "aboutus";
-    arguments[0] ? arguments[0]["__parentSymbol"] : null;
-    arguments[0] ? arguments[0]["$model"] : null;
-    arguments[0] ? arguments[0]["__itemTemplate"] : null;
+    if (arguments[0]) {
+        {
+            __processArg(arguments[0], "__parentSymbol");
+        }
+        {
+            __processArg(arguments[0], "$model");
+        }
+        {
+            __processArg(arguments[0], "__itemTemplate");
+        }
+    }
     var $ = this;
     var exports = {};
     $.__views.aboutus = Ti.UI.createView({
         id: "aboutus",
-        backgroundColor: "blue"
+        backgroundColor: "#ffffff"
     });
     $.__views.aboutus && $.addTopLevelView($.__views.aboutus);
     $.__views.topView = Alloy.createController("top_view", {
@@ -19,6 +36,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
+    $.topView.headerLabel.text = "About Us";
     _.extend($, exports);
 }
 

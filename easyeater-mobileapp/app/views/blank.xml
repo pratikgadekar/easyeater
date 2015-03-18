@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container"  id="blank" height="100%" id="blank"  backgroundColor="transparent" >
+	<View class="container"  id="blank" height="100%" id="blank"  backgroundColor="#000" opacity="0.5">
 		
 	</View>
 </Alloy>

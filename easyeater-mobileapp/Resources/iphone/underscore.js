@@ -164,7 +164,7 @@
         };
         j(a, function(a, b, h) {
             b = c ? c.call(d, a, b, h) : a;
-            e.computed > b && (e = {
+            b < e.computed && (e = {
                 value: a,
                 computed: b
             });
@@ -284,7 +284,7 @@
         return -1;
     };
     b.range = function(a, b, d) {
-        1 >= arguments.length && (b = a || 0, a = 0);
+        arguments.length <= 1 && (b = a || 0, a = 0);
         for (var d = arguments[2] || 1, e = Math.max(Math.ceil((b - a) / d), 0), f = 0, g = Array(e); e > f; ) g[f++] = a, 
         a += d;
         return g;
@@ -378,7 +378,7 @@
     };
     b.after = function(a, b) {
         return 0 >= a ? b() : function() {
-            if (1 > --a) return b.apply(this, arguments);
+            if (--a < 1) return b.apply(this, arguments);
         };
     };
     b.keys = J || function(a) {

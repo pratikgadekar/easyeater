@@ -1,7 +1,7 @@
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     root.Parse.VERSION = "1.0.5";
-})(this);
+}(this);
 
 (function() {
     function eq(a, b, stack) {
@@ -196,7 +196,7 @@
         };
         each(obj, function(value, index, list) {
             var computed = iterator ? iterator.call(context, value, index, list) : value;
-            result.computed > computed && (result = {
+            computed < result.computed && (result = {
                 value: value,
                 computed: computed
             });
@@ -288,7 +288,7 @@
     _.uniq = _.unique = function(array, isSorted, iterator) {
         var initial = iterator ? _.map(array, iterator) : array;
         var results = [];
-        3 > array.length && (isSorted = true);
+        array.length < 3 && (isSorted = true);
         _.reduce(initial, function(memo, value, index) {
             if (isSorted ? _.last(memo) !== value || !memo.length : !_.include(memo, value)) {
                 memo.push(value);
@@ -341,7 +341,7 @@
         return -1;
     };
     _.range = function(start, stop, step) {
-        if (1 >= arguments.length) {
+        if (arguments.length <= 1) {
             stop = start || 0;
             start = 0;
         }
@@ -453,7 +453,7 @@
     _.after = function(times, func) {
         if (0 >= times) return func();
         return function() {
-            if (1 > --times) return func.apply(this, arguments);
+            if (--times < 1) return func.apply(this, arguments);
         };
     };
     _.keys = nativeKeys || function(obj) {
@@ -669,7 +669,7 @@
     };
 }).call(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     if ("undefined" != typeof exports && exports._) {
@@ -753,7 +753,7 @@
         if ("undefined" != typeof XDomainRequest) return Parse._ajaxIE8(method, url, data, success, error);
         var xhr = Titanium.Network.createHTTPClient();
         xhr.onreadystatechange = function() {
-            if (4 === xhr.readyState) if (xhr.status >= 200 && 300 > xhr.status) {
+            if (4 === xhr.readyState) if (xhr.status >= 200 && xhr.status < 300) {
                 var response;
                 try {
                     response = JSON.parse(xhr.responseText);
@@ -842,9 +842,9 @@
         }
         return value;
     };
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -854,9 +854,9 @@
             Parse._request("functions", name, 0, "POST", Parse._encode(data, null, true), options);
         }
     });
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -944,9 +944,9 @@
             this.relationsToAdd = [];
         }
     };
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -991,7 +991,7 @@
         INVALID_LINKED_SESSION: 251,
         UNSUPPORTED_SERVICE: 252
     });
-})(this);
+}(this);
 
 (function() {
     var root = this;
@@ -1072,7 +1072,7 @@
     Parse.Events.unbind = Parse.Events.off;
 }).call(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -1161,9 +1161,9 @@
             return 3958.8 * this.radiansTo(point);
         }
     };
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -1261,9 +1261,9 @@
         }
         throw "role must be a Parse.Role or a String";
     };
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -1540,7 +1540,7 @@
             };
             model._refreshCache();
             var keys = _.keys(model.attributes);
-            for (i = 0; keys.length > i; ++i) {
+            for (i = 0; i < keys.length; ++i) {
                 var key = keys[i];
                 var child = model.attributes[key];
                 if (child instanceof Parse.Object) {
@@ -1726,9 +1726,9 @@
             onError ? onError(originalModel, error, options) : originalModel.trigger("error", originalModel, error, options);
         };
     };
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -1763,9 +1763,9 @@
             return false;
         }
     });
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -1954,9 +1954,9 @@
         };
     });
     Parse.Collection.extend = Parse._extend;
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -2030,9 +2030,9 @@
         }
     });
     Parse.View.extend = Parse._extend;
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -2196,9 +2196,9 @@
             Ti.App.Properties.setString(Parse._getParsePath(Parse.User._CURRENT_USER_KEY), JSON.stringify(json));
         }
     });
-})(this);
+}(this);
 
-(function(root) {
+!function(root) {
     root.Parse = root.Parse || {};
     var Parse = root.Parse;
     var _ = Parse._;
@@ -2421,4 +2421,4 @@
             }
         };
     };
-})(this);
+}(this);

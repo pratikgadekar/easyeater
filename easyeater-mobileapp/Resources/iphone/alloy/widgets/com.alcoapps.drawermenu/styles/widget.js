@@ -13,7 +13,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0002,
+    priority: 100000.0003,
     key: "menuview",
     style: {
         backgroundColor: "#cacaca",
@@ -22,7 +22,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0003,
+    priority: 100000.0004,
     key: "mainview",
     style: {
         backgroundColor: "red",
@@ -31,7 +31,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0004,
+    priority: 100000.0005,
     key: "mainviewheader",
     style: {
         top: "0",
@@ -41,7 +41,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0005,
+    priority: 100000.0006,
     key: "menubutton",
     style: {
         left: "0",

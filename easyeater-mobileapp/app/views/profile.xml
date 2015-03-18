@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container" id="profile" backgroundColor="cyan">
+	<View class="container" id="profile" backgroundColor="#ffffff">
 		<Require type="view" src="top_view" id="topView"/>
 	</View>
 </Alloy>
