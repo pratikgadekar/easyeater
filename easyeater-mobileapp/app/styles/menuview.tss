@@ -9,7 +9,7 @@
 	layout: 'horizontal'
 },
 ".tableRow":{
-	height: '40dp'
+	height: '50dp'
 },
 "#rowContainer":{
 	height: '30dp',
@@ -35,7 +35,7 @@
 	left: 10,
 	height: "20dp",
 	font:{
-		fontSize: "12dp"
+		fontSize: "14sp"
 	},
 	color: "#4d4d4d"
 	

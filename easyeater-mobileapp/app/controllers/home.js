@@ -49,7 +49,7 @@ blank.blank.addEventListener('swipe', function(e) {
 	}
 
 });
-
+//
 
 function removePages(pageNumber) {
 

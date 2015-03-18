@@ -15,7 +15,7 @@ function Controller() {
     var __alloyId0 = [];
     $.__views.menuList = Ti.UI.createTableViewRow({
         selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
-        height: "40dp",
+        height: "50dp",
         id: "menuList"
     });
     __alloyId0.push($.__views.menuList);
@@ -38,7 +38,7 @@ function Controller() {
         left: 10,
         height: "20dp",
         font: {
-            fontSize: "12dp"
+            fontSize: "14sp"
         },
         color: "#4d4d4d",
         text: "Menu",
@@ -55,7 +55,7 @@ function Controller() {
     $.__views.menuList.add($.__views.__alloyId1);
     $.__views.feedbackList = Ti.UI.createTableViewRow({
         selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
-        height: "40dp",
+        height: "50dp",
         id: "feedbackList"
     });
     __alloyId0.push($.__views.feedbackList);
@@ -78,7 +78,7 @@ function Controller() {
         left: 10,
         height: "20dp",
         font: {
-            fontSize: "12dp"
+            fontSize: "14sp"
         },
         color: "#4d4d4d",
         text: "Feedback",
@@ -95,7 +95,7 @@ function Controller() {
     $.__views.feedbackList.add($.__views.__alloyId2);
     $.__views.aboutus = Ti.UI.createTableViewRow({
         selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
-        height: "40dp",
+        height: "50dp",
         id: "aboutus"
     });
     __alloyId0.push($.__views.aboutus);
@@ -118,7 +118,7 @@ function Controller() {
         left: 10,
         height: "20dp",
         font: {
-            fontSize: "12dp"
+            fontSize: "14sp"
         },
         color: "#4d4d4d",
         text: "About Us",
@@ -135,7 +135,7 @@ function Controller() {
     $.__views.aboutus.add($.__views.__alloyId3);
     $.__views.lookupList = Ti.UI.createTableViewRow({
         selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
-        height: "40dp",
+        height: "50dp",
         id: "lookupList"
     });
     __alloyId0.push($.__views.lookupList);
@@ -158,7 +158,7 @@ function Controller() {
         left: 10,
         height: "20dp",
         font: {
-            fontSize: "12dp"
+            fontSize: "14sp"
         },
         color: "#4d4d4d",
         text: "Lookup",
@@ -175,7 +175,7 @@ function Controller() {
     $.__views.lookupList.add($.__views.__alloyId4);
     $.__views.menuListAdmin = Ti.UI.createTableViewRow({
         selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
-        height: "40dp",
+        height: "50dp",
         id: "menuListAdmin"
     });
     __alloyId0.push($.__views.menuListAdmin);
@@ -198,7 +198,7 @@ function Controller() {
         left: 10,
         height: "20dp",
         font: {
-            fontSize: "12dp"
+            fontSize: "14sp"
         },
         color: "#4d4d4d",
         text: "Menu List Admin",
@@ -215,7 +215,7 @@ function Controller() {
     $.__views.menuListAdmin.add($.__views.__alloyId5);
     $.__views.profile = Ti.UI.createTableViewRow({
         selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
-        height: "40dp",
+        height: "50dp",
         id: "profile"
     });
     __alloyId0.push($.__views.profile);
@@ -238,7 +238,7 @@ function Controller() {
         left: 10,
         height: "20dp",
         font: {
-            fontSize: "12dp"
+            fontSize: "14sp"
         },
         color: "#4d4d4d",
         text: "Profile",
