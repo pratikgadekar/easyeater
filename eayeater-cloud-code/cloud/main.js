@@ -164,7 +164,7 @@ Parse.Cloud.define("saveFeedback", function(req, res) {
             phone_no: req.params.phone_no,
             name: req.params.name,
             rating: req.params.rating,
-            description: req.params.description,
+            de: req.params.description,
             success: function(message) {
                 res.success(message);
             },

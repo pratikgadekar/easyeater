@@ -13,14 +13,14 @@ var Response = {
 
 exports.save = function(params) {
  
-    if(!params || !params.name || !params.price || !params.menu_type_id || !params.discription){
+    if(!params || !params.name || !params.price || !params.menu_type_id || !params.discriptions){
         params.error(Response.EmptyParameters);
     }else{
     	 
         	var menu = new Menu();
         	menu.set("name",params.name);
         	menu.set("price",params.price);
-        	menu.set("discription",params.discription);
+        	menu.set("discriptions",params.discriptions);
 
         	var lookup = new Lookup();
         	lookup.id = params.menu_type_id;
