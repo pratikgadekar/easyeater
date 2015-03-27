@@ -33,19 +33,6 @@ function Controller() {
         duration = opts.duration;
         parent = opts.parent;
         console.log("initialized");
-        setSwipe();
-    };
-    var setSwipe = function() {
-        parent.addEventListener("swipe", function(e) {
-            if (false == menuOpen && "right" == e.direction) {
-                showhidemenu();
-                menuOpen = true;
-            }
-            if (true == menuOpen && "left" == e.direction) {
-                showhidemenu();
-                menuOpen = false;
-            }
-        });
     };
     var showhidemenu = function() {
         if (menuOpen) {

@@ -1,0 +1,16 @@
+<Alloy>
+	<Window class="container" id="addMenu">
+		<Require type="view" src="top_view_back" id="topViewBack"/>
+		<View layout="vertical" height="Ti.UI.SIZE" top="50dp">
+			
+			<TextField id="cusine_type" hintText="Select Cusine Type" top="10dp" editable="false"></TextField>
+			<TextField id="menu_type" hintText="Select Menu Type" top="10dp" editable="false"></TextField>
+			<TextField id="name" hintText="Name" top="10dp"></TextField>
+			<TextField id="price" hintText="Price" top="10dp"></TextField>
+			<TextField id="discription" hintText="Discription" top="10dp"></TextField>
+			
+			<Button id="Add" top="10dp" backgroundColor="#f69a55" color="#ffffff">Add</Button>
+			
+		</View>
+	</Window>
+</Alloy>

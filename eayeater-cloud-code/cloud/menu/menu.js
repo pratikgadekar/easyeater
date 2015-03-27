@@ -13,25 +13,27 @@ var Response = {
 
 exports.save = function(params) {
  
-    if(!params || !params.name || !params.price || !params.menu_type_id || !params.discriptions){
+    if(!params || !params.name || !params.price || !params.cusine_type_id || !params.discription || !params.menu_type){
         params.error(Response.EmptyParameters);
     }else{
     	 
         	var menu = new Menu();
         	menu.set("name",params.name);
         	menu.set("price",params.price);
-        	menu.set("discriptions",params.discriptions);
+        	menu.set("discription",params.discription);
+          menu.set("menu_type",params.menu_type);
 
         	var lookup = new Lookup();
-        	lookup.id = params.menu_type_id;
-        	menu.set("menu_type_id",lookup);
+        	lookup.id = params.cusine_type_id;
+        	menu.set("cusine_type_id",lookup);
 
           	menu.save(null, {
             success: function(menu) {
                 params.success(Response.SaveSuccess);
             },
              error: function(error) {
-                  params.error(error + "error ");
+              console.log("getting error: " + error.message);
+              params.error(error + "error ");
              }
             });
 
@@ -42,7 +44,7 @@ exports.save = function(params) {
 
 exports.update = function(params) {
  
-    if(!params || !params.id || !params.name || !params.price || !params.menu_type_id || !params.discription){
+    if(!params || !params.id || !params.name || !params.price || !params.cusine_type_id || !params.discription || !params.menu_type){
         params.error(Response.EmptyParameters);
     }else{
        
@@ -56,10 +58,11 @@ exports.update = function(params) {
 		        	menu.set("name",params.name);
 		        	menu.set("price",params.price);
 		        	menu.set("discription",params.discription);
+              menu.set("menu_type",params.menu_type);
 
 		        	var lookup = new Lookup();
-		        	lookup.id = params.menu_type_id;
-		        	menu.set("menu_type_id",lookup);
+		        	lookup.id = params.cusine_type_id;
+		        	menu.set("cusine_type_id",lookup);
 
 		          	menu.save(null, {
 		            success: function(menu) {

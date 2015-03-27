@@ -1,3 +1,47 @@
+"Window[platform=ios]": {
+	top: 20,
+	backgroundColor:"white",
+	statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	orientationModes: [Ti.UI.PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT,Ti.UI.UPSIDE_PORTRAIT],
+	navBarHidden: true,
+}
+
+"Window[platform=android]": {
+	top: 20,
+	backgroundColor:"white",
+	orientationModes: [Ti.UI.PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT],
+	navBarHidden: true,
+	exitOnClose: true
+}
+
 "TableViewRow":{
 	selectionStyle: Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
+}
+
+
+"TextField": {
+	borderColor: "#4d4d4d",
+	width: "80%",
+	height: "30dp",
+	borderWidth: "0.5dp",
+	borderRadius: "3",
+	font:{
+		fontSize: "12dp"
+	},
+	color: "#4d4d4d",
+	paddingLeft : "10dp"
+}
+
+"Button" : {
+	backgroundColor : "#ffffff",
+	height: "30dp",
+	width: "80%",
+	color: "#f69a55",
+	borderRadius: "5",
+	borderColor : "#f69a55",
+	borderWidth : "0.5dp",
+	font:{
+		fontSize: "12dp"
+	},
+	
 }

@@ -1,5 +1,21 @@
 <Alloy>
-	<View class="container" id="profile" backgroundColor="cyan">
+	<View class="container" id="profile" backgroundColor="#ffffff">
 		<Require type="view" src="top_view" id="topView"/>
+		<View top="70dp" height="Ti.UI.SIZE" id="loginView" layout="vertical">
+			<TextField id="userName" hintText="User name"></TextField>
+			<TextField id="password" passwordMask="true" hintText="Passowrd" top="10dp"></TextField>
+			<Button id="signIn" top="10dp" backgroundColor="#f69a55" color="#ffffff">Sign In</Button>
+		</View>
+		
+		<View id="UserDetails" layout="vertical" top="70dp">
+			
+			<Button id="editProfile" top="10dp">Edit Profile</Button>
+			<Button id="lookup" top="10dp">Lookup</Button>
+			<Button id="menu" top="10dp">Menu</Button>
+			<Button id="feedback" top="10dp">Feedback</Button>
+			<Button id="logOut" top="10dp">Log Out</Button>
+			
+		</View>
+		
 	</View>
 </Alloy>

@@ -1,15 +1,29 @@
 function Controller() {
     function removePages(pageNumber) {
-        1 == pageNumber ? $.drawermenu.drawermainview.remove(menuList.getView()) : 2 == pageNumber ? $.drawermenu.drawermainview.remove(feedbackList.getView()) : 3 == pageNumber ? $.drawermenu.drawermainview.remove(aboutUs.getView()) : 4 == pageNumber ? $.drawermenu.drawermainview.remove(lookUpList.getView()) : 5 == pageNumber ? $.drawermenu.drawermainview.remove(menuAdminList.getView()) : 6 == pageNumber && $.drawermenu.drawermainview.remove(profile.getView());
+        1 == pageNumber ? $.drawermenu.drawermainview.remove(menuList.getView()) : 2 == pageNumber ? $.drawermenu.drawermainview.remove(feedbackList.getView()) : 3 == pageNumber ? $.drawermenu.drawermainview.remove(aboutUs.getView()) : 6 == pageNumber && $.drawermenu.drawermainview.remove(profile.getView());
     }
     function applyColor(activeView) {
         menuView.menuLabel.color = "#4d4d4d";
         menuView.feedbackLabel.color = "#4d4d4d";
         menuView.aboutUsLabel.color = "#4d4d4d";
-        menuView.lookUpLabel.color = "#4d4d4d";
-        menuView.menuListAdminLabel.color = "#4d4d4d";
         menuView.profileLabelLabel.color = "#4d4d4d";
-        1 == activeView ? menuView.menuLabel.color = "#f69a55" : 2 == activeView ? menuView.feedbackLabel.color = "#f69a55" : 3 == activeView ? menuView.aboutUsLabel.color = "#f69a55" : 4 == activeView ? menuView.lookUpLabel.color = "#f69a55" : 5 == activeView ? menuView.menuListAdminLabel.color = "#f69a55" : 6 == activeView && (menuView.profileLabelLabel.color = "#f69a55");
+        menuView.menu_icon.image = "images/icons/icon_menu_128.png";
+        menuView.feedback_icon.image = "images/icons/icon_feedback_128.png";
+        menuView.aboutus_icon.image = "images/icons/icon_aboutus_128.png";
+        menuView.profile_icon.image = "images/icons/icon_profile_128.png";
+        if (1 == activeView) {
+            menuView.menuLabel.color = "#f69a55";
+            menuView.menu_icon.image = "images/icons/icon_menu_hover_128.png";
+        } else if (2 == activeView) {
+            menuView.feedbackLabel.color = "#f69a55";
+            menuView.feedback_icon.image = "images/icons/icon_feedback_hover_128.png";
+        } else if (3 == activeView) {
+            menuView.aboutUsLabel.color = "#f69a55";
+            menuView.aboutus_icon.image = "images/icons/icon_aboutus_hover_128.png";
+        } else if (6 == activeView) {
+            menuView.profileLabelLabel.color = "#f69a55";
+            menuView.profile_icon.image = "images/icons/icon_profile_hover_128.png";
+        }
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "home";
@@ -39,8 +53,6 @@ function Controller() {
     var menuList = controls.getMenuList();
     var feedbackList = controls.getFeedbackList();
     var aboutUs = controls.getAboutUs();
-    var lookUpList = controls.getLookUpList();
-    var menuAdminList = controls.getMenuAdminList();
     var profile = controls.getProfile();
     var blank = controls.getBlankView();
     $.drawermenu.init({
@@ -91,18 +103,6 @@ function Controller() {
             activeView = 3;
             applyColor(activeView);
         }
-        if ("lookupList" === e.rowData.id) {
-            removePages(activeView);
-            $.drawermenu.drawermainview.add(lookUpList.getView());
-            activeView = 4;
-            applyColor(activeView);
-        }
-        if ("menuListAdmin" === e.rowData.id) {
-            removePages(activeView);
-            $.drawermenu.drawermainview.add(menuAdminList.getView());
-            activeView = 5;
-            applyColor(activeView);
-        }
         if ("profile" === e.rowData.id) {
             removePages(activeView);
             $.drawermenu.drawermainview.add(profile.getView());
@@ -111,6 +111,12 @@ function Controller() {
         }
         Ti.API.info(e.rowData.id);
     });
+    menuView.profileLabelLabel.text = Parse.User.current() ? "Profile" : "Login";
+    var loginlogoutsucess = function(data) {
+        "login" == data.value && (menuView.profileLabelLabel.text = "Profile");
+        "logout" == data.value && (menuView.profileLabelLabel.text = "Login");
+    };
+    Ti.App.addEventListener("loginlogoutsucess", loginlogoutsucess);
     _.extend($, exports);
 }
 

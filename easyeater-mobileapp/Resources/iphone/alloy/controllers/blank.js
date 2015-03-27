@@ -9,7 +9,8 @@ function Controller() {
     $.__views.blank = Ti.UI.createView({
         id: "blank",
         height: "100%",
-        backgroundColor: "transparent"
+        backgroundColor: "#000",
+        opacity: "0.5"
     });
     $.__views.blank && $.addTopLevelView($.__views.blank);
     exports.destroy = function() {};

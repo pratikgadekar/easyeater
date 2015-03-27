@@ -1,0 +1,11 @@
+
+".container" : {
+  
+}
+
+"#resetPassword" : {
+	color : "#f69a55",
+	font:{
+		fontSize: "12dp"
+	},
+}

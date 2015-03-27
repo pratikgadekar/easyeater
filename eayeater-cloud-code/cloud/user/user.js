@@ -41,7 +41,7 @@ exports.save = function(params) {
 };
  
 exports.update = function(params) {
-    if(!params || !params.id || !params.userName || !params.password || !params.firstName || !params.lastName || !params.email) {
+    if(!params || !params.id || !params.userName || !params.firstName || !params.lastName || !params.email) {
         params.error('Empty parameters! UPDATE');
     } else {
 
@@ -54,7 +54,9 @@ exports.update = function(params) {
           success: function(user) {
             // Successfully retrieved the object.
             user.set("username", params.userName);
+            if(params.password){
             user.set("password", params.password);
+            }
             user.set("email", params.email);
             user.set("firstName", params.firstName);
             user.set("lastName", params.lastName);

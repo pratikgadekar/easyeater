@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container" id="feedbackList" backgroundColor="pink">
+	<View class="container" id="feedbackList" backgroundColor="#ffffff">
 		<Require type="view" src="top_view" id="topView"/>
 	</View>
 </Alloy>

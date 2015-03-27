@@ -1,5 +1,15 @@
 <Alloy>
-	<View class="container" id="lookupList" backgroundColor="orange">
-		<Require type="view" src="top_view" id="topView"/>
-	</View>
+	<Window class="container" id="lookupList" backgroundColor="#ffffff">
+		<Require type="view" src="top_view_back" id="topViewBack"/>
+		
+		<ListView id="lookupNameList" defaultItemTemplate="template" top="55dp" backgroundColor="transparent" right="10dp">
+			<Templates>
+				<ItemTemplate name="template" top="0dp" backgroundColor="transparent" selectionStyle= "Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE">
+					<Label id="name" bindId="name"></Label>
+					<ImageView id="rightArrow" ></ImageView>
+
+				</ItemTemplate>
+			</Templates>
+		</ListView>
+	</Window>
 </Alloy>

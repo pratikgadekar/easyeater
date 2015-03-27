@@ -2,3 +2,11 @@
 ".container" : {
   
 }
+
+".headerLabel":{
+	height: "20dp",
+	font:{
+		fontSize: "12dp"
+	},
+	color: "#4d4d4d"
+}

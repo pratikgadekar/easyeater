@@ -1,0 +1,41 @@
+
+".container": {}
+
+"#topView": {
+	backgroundColor: "#f7f7f7",
+	height: "50dp",
+	top: "0dp"
+}
+
+"#menuImgView": {
+
+	height: "50dp",
+	width: "50dp",
+	left: "0dp"
+}
+
+"#menuListImg": {
+	image: "images/icons/icon_back_button.png",
+	height: "20dp",
+	width: "20dp"
+}
+
+"#headerLabel":{
+	height: "20dp",
+	font:{
+		fontSize: "14dp"
+	},
+	color: "#4d4d4d"
+}
+
+"#addView": {
+	height: "50dp",
+	width: "40dp",
+	right: "0dp"
+}
+
+"#addImage" : {
+	image : "images/icons/icon_add.png",
+	height: "25dp",
+	width: "25dp"
+}

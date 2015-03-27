@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container" id="feedbackAdminList" backgroundColor="#ffffff">
+		<Require type="view" src="top_view_back" id="topViewBack"/>
+	</Window>
+</Alloy>

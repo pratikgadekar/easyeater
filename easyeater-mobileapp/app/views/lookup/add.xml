@@ -1,0 +1,14 @@
+<Alloy>
+	<Window class="container" id="addLookup">
+		<Require type="view" src="top_view_back" id="topViewBack"/>
+		<View layout="vertical" height="Ti.UI.SIZE" top="50dp">
+			
+			
+			<TextField id="name" hintText="Lookup Name" top="10dp"></TextField>
+			<TextField id="type" hintText="Look Up type e.g. 0 or 1" top="10dp"></TextField>
+			
+			<Button id="Add" top="10dp" backgroundColor="#f69a55" color="#ffffff">Add</Button>
+			
+		</View>
+	</Window>
+</Alloy>

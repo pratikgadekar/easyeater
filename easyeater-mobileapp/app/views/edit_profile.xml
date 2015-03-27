@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="editProfile" backgroundColor="#ffffff">
+		<Require type="view" src="top_view_back" id="topViewBack"/>
+		<View layout="vertical" height="Ti.UI.SIZE" top="50dp">
+			
+			<TextField id="userName" hintText="User name" top="10dp"></TextField>
+			<TextField id="email" hintText="Email Id" top="10dp"></TextField>
+			<TextField id="firstName" hintText="First Name" top="10dp"></TextField>
+			<TextField id="lastName" hintText="Last Name" top="10dp"></TextField>
+			
+			<Button id="update" top="10dp" backgroundColor="#f69a55" color="#ffffff">Update</Button>
+			<Label id="resetPassword" text="Reset Password" right="10%" top="10dp"></Label>
+		</View>
+
+	</Window>
+</Alloy>

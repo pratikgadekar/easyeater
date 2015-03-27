@@ -82,13 +82,15 @@ if(req.params.id) {
             	id: req.params.id,
                name: req.params.name,
                price: req.params.price,
-               menu_type_id: req.params.menu_type_id,
+               cusine_type_id: req.params.cusine_type_id,
                discription: req.params.discription,
+               menu_type : req.params.menu_type,
                success: function(message) {
                 res.success(message);
                 console.log(message);
                },
                error: function(message) {
+                 res.error(message);
                  console.log(message);
                }
             });
@@ -96,13 +98,15 @@ if(req.params.id) {
         	menu.save({
                name: req.params.name,
                price: req.params.price,
-               menu_type_id: req.params.menu_type_id,
+               cusine_type_id: req.params.cusine_type_id,
                discription: req.params.discription,
+               menu_type : req.params.menu_type,
                success: function(message) {
                 res.success(message);
                 console.log(message);
                },
                error: function(message) {
+                res.error(message);
                  console.log(message);
                }
             });

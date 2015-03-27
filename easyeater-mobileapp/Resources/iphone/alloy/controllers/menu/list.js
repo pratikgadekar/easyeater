@@ -8,7 +8,7 @@ function Controller() {
     var exports = {};
     $.__views.menuList = Ti.UI.createView({
         id: "menuList",
-        backgroundColor: "yellow"
+        backgroundColor: "#ffffff"
     });
     $.__views.menuList && $.addTopLevelView($.__views.menuList);
     $.__views.topView = Alloy.createController("top_view", {
@@ -19,6 +19,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
+    $.topView.headerLabel.text = "Menu";
     _.extend($, exports);
 }
 

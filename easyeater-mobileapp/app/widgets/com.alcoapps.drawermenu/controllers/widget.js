@@ -8,22 +8,22 @@ var init=function(opts){
 	duration=opts.duration;
 	parent=opts.parent;
 	console.log('initialized');
-	setSwipe();
+	//setSwipe();
 }
 
-var setSwipe=function(){
-	parent.addEventListener('swipe',function(e){ 
-	    if(menuOpen == false && e.direction == 'right'){
-	        showhidemenu();
-	        menuOpen = true;
-	    }
-	    
-	    if(menuOpen == true && e.direction == 'left' ){
-	        showhidemenu();
-	        menuOpen = false;
-	    }
-	});
-}
+// var setSwipe=function(){
+	// parent.addEventListener('swipe',function(e){ 
+	    // if(menuOpen == false && e.direction == 'right'){
+	        // showhidemenu();
+	        // menuOpen = true;
+	    // }
+// 	    
+	    // if(menuOpen == true && e.direction == 'left' ){
+	        // showhidemenu();
+	        // menuOpen = false;
+	    // }
+	// });
+// }
 
 var showhidemenu=function(){
 	if (menuOpen){

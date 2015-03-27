@@ -2,3 +2,19 @@
 ".container" : {
   
 }
+
+"#name": {
+	font:{
+		fontSize: "14sp"
+	},
+	color: "#4d4d4d",
+	left:"20dp"
+}
+
+
+"#rightArrow" : {
+	image : "images/icons/icon_side_arrow.png",
+	right : "5dp,",
+	height : "20dp",
+	width : "20dp",
+}

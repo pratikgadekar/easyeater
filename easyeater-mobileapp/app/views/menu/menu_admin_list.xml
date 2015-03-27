@@ -1,5 +1,26 @@
 <Alloy>
-	<View class="container" id="menuAdminList" backgroundColor="gray">
-		<Require type="view" src="top_view" id="topView"/>
-	</View>
+	<Window class="container" id="menuAdminList" backgroundColor="#ffffff">
+		<Require type="view" src="top_view_back" id="topViewBack"/>
+		
+		<View height="40dp" top="50dp" layout="horizontal">
+			<View width="50%" backgroundColor="#ffffff" id="vegTab">
+				<Label class="headerLabel" id="vegheader">Veg</Label>
+				<View bottom="0" height="3dp" backgroundColor="f69a55" id="vegselected"></View>
+			</View>
+			<View width="50%" backgroundColor="#ffffff" id="nonvegTab">
+				<Label class="headerLabel" id="vegheader">Non veg</Label>
+				<View bottom="0" height="3dp" backgroundColor="f69a55" visible="false" id="nonvegselected"></View>
+			</View>
+		
+			</View>
+			 <ScrollableView id="scrollableView" showPagingControl="false" top="100dp">
+            <View id="view1">
+               <Label>View 1</Label>
+            </View>
+            <View id="view2">
+             <Label>View 2</Label>
+             </View>
+            
+        </ScrollableView>
+	</Window>
 </Alloy>

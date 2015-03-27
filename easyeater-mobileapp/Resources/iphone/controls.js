@@ -16,14 +16,6 @@ exports.getAboutUs = function() {
     return Alloy.createController("aboutus");
 };
 
-exports.getLookUpList = function() {
-    return Alloy.createController("lookup/list");
-};
-
-exports.getMenuAdminList = function() {
-    return Alloy.createController("menu/menu_admin_list");
-};
-
 exports.getProfile = function() {
     return Alloy.createController("profile");
 };

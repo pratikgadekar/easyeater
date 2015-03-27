@@ -7,14 +7,13 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.topView = Ti.UI.createView({
-        backgroundColor: "red",
+        backgroundColor: "#f7f7f7",
         height: "50dp",
         top: "0dp",
         id: "topView"
     });
     $.__views.topView && $.addTopLevelView($.__views.topView);
     $.__views.menuImgView = Ti.UI.createView({
-        backgroundColor: "green",
         height: "50dp",
         width: "50dp",
         left: "0dp",
@@ -28,6 +27,15 @@ function Controller() {
         id: "menuListImg"
     });
     $.__views.menuImgView.add($.__views.menuListImg);
+    $.__views.headerLabel = Ti.UI.createLabel({
+        height: "20dp",
+        font: {
+            fontSize: "14dp"
+        },
+        color: "#4d4d4d",
+        id: "headerLabel"
+    });
+    $.__views.topView.add($.__views.headerLabel);
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};

@@ -8,7 +8,7 @@ function Controller() {
     var exports = {};
     $.__views.feedbackList = Ti.UI.createView({
         id: "feedbackList",
-        backgroundColor: "pink"
+        backgroundColor: "#ffffff"
     });
     $.__views.feedbackList && $.addTopLevelView($.__views.feedbackList);
     $.__views.topView = Alloy.createController("top_view", {
@@ -19,6 +19,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
+    $.topView.headerLabel.text = "Feedback";
     _.extend($, exports);
 }
 
